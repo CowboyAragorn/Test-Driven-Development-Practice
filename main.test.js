@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from "./main";
+import { capitalize, reverseString, calculator, caesarCipher } from "./main";
 
 test("capitalize", () => {
   expect(capitalize("alphabet")).toBe("Alphabet");
@@ -22,4 +22,12 @@ test("multiplication", () => {
 });
 test("division", () => {
   expect(calculator.division(6, 2)).toBe(3);
+});
+
+test("Caesar Ciphered Start", () => {
+  expect(caesarCipher("abCdeFg")).toBe("bcDefGh");
+});
+
+test("Caesar Ciphered End", () => {
+  expect(caesarCipher("xyZ")).toBe("yzA");
 });

@@ -20,3 +20,16 @@ export const calculator = {
     return a / b;
   },
 };
+export function caesarCipher(str) {
+  return str
+    .split("")
+    .map((char, index) => {
+      if (char === "z") {
+        return "a";
+      } else if (char === "Z") {
+        return "A";
+      }
+      return String.fromCharCode(char.charCodeAt() + 1);
+    })
+    .join("");
+}
