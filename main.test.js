@@ -1,4 +1,10 @@
-import { capitalize, reverseString, calculator, caesarCipher } from "./main";
+import {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+  object,
+} from "./main";
 
 test("capitalize", () => {
   expect(capitalize("alphabet")).toBe("Alphabet");
@@ -30,4 +36,17 @@ test("Caesar Ciphered Start", () => {
 
 test("Caesar Ciphered End", () => {
   expect(caesarCipher("xyZ")).toBe("yzA");
+});
+
+test("Array Average", () => {
+  expect(object.average).toBe(4);
+});
+test("Array Min", () => {
+  expect(object.min).toBe(1);
+});
+test("Array Max", () => {
+  expect(object.max).toBe(8);
+});
+test("Array Length", () => {
+  expect(object.length).toBe(6);
 });

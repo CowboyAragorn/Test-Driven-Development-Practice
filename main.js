@@ -33,3 +33,20 @@ export function caesarCipher(str) {
     })
     .join("");
 }
+function analyzeArray(arr) {
+  return {
+    average:
+      arr.reduce((result, item) => {
+        return item + result;
+      }, 0) / arr.length,
+    min: arr.sort((a, b) => {
+      return a - b;
+    })[0],
+    max: arr.sort((a, b) => {
+      return a - b;
+    })[arr.length - 1],
+    length: arr.length,
+  };
+}
+
+export const object = analyzeArray([1, 8, 3, 4, 2, 6]);
